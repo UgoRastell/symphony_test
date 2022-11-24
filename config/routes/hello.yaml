@@ -1,0 +1,8 @@
+hello:
+    path: /hello/{prenom}
+    controller: App\Controller\HelloController::hello
+    methods: [GET, POST]
+    host: 
+    schemes: [https, http]
+    defaults: 
+        prenom: World
