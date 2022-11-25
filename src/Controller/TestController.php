@@ -9,12 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
-
-    public function index (){
-        dd("ok");
-    }
-
-
     public function test(Request $request, $age)
     {
         return new Response("Vous avez $age ans");

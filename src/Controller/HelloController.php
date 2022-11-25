@@ -2,37 +2,24 @@
 
 namespace App\Controller;
 
-use App\Taxes\Calculator;
-use App\Taxes\Detector;
-use Cocur\Slugify\Slugify;
-use Psr\Log\LoggerInterface;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 
-class HelloController
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+
+class HelloController extends AbstractController
 {
-    protected $calculator;
-    protected $detector;
 
-    public function __construct(Calculator $calculator, Detector $detector)
+    public function hello($prenom)
     {
-        $this->calculator = $calculator;
-        $this->detector = $detector;
+        return $this->render('hello.html.twig', [
+            "prenom"=> $prenom
+        ]);
     }
 
+    public function example(){
 
-    public function hello($prenom, Environment $twig)
-    {
-        $html = $twig->render('hello.html.twig', [
-            'prenom'=>$prenom,
-            'ages'=>[
-                12,
-                18,
-                29,
-                15
-            ]
+        return $this->render('example.html.twig', [
+            "age"=> 33
         ]);
-        return new Response($html);
     }
 }

@@ -1,0 +1,6 @@
+example:
+    path: /example
+    controller: App\Controller\HelloController::example
+    methods: [GET, POST]
+    host: 
+    schemes: [https, http]
