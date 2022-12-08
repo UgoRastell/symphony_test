@@ -9,6 +9,7 @@
         "ext-iconv": "*",
         "cocur/slugify": "^4.2",
         "doctrine/doctrine-bundle": "^2.7",
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.13",
         "sensio/framework-extra-bundle": "^6.2",
@@ -75,5 +76,8 @@
             "allow-contrib": false,
             "require": "6.1.*"
         }
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.20"
     }
 }
